@@ -6,9 +6,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
-* 具体的な課題を生成するクラス
-*
-*/
+ * 具体的な課題を生成するクラス
+ */
 @Service
 @RequiredArgsConstructor
 public class IssueService {
