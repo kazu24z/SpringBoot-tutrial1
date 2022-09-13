@@ -19,7 +19,7 @@ public class IssueController {
      * @return http://domain/issuesのページ
      */
     @GetMapping("/issues")
-    public String showList(Model model){
+    public String showList(Model model) {
         model.addAttribute("issueList", issueService.findAll());
         return "issues/list";
     }
