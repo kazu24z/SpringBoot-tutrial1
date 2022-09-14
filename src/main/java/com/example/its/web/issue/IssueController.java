@@ -28,7 +28,8 @@ public class IssueController {
      * @param model
      * @return http://domain/issuesのページ
      */
-    @GetMapping
+
+    @GetMapping("/issues")
     public String showList(Model model) {
         model.addAttribute("issueList", issueService.findAll());
         return "issues/list";

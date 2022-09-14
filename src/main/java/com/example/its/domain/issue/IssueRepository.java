@@ -12,7 +12,13 @@ import java.util.List;
  * 「課題」のリポジトリ層を作成
  */
 @Mapper
+@Repository
 public interface IssueRepository {
+
+    /**
+     * 課題の一覧を取得
+     * @return IssueEntityのリスト
+     */
     @Select("select * from issues")
     List<IssueEntity> findAll();
 

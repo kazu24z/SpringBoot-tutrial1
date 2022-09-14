@@ -8,15 +8,13 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
-* 具体的な課題を生成するクラス
-*
-*/
+ * 具体的な課題を生成するクラス
+ */
 @Service
 @RequiredArgsConstructor
 public class IssueService {
 
     private final IssueRepository issueRepository;
-
     /**
      * 課題のリストを生成する
      * @return 課題データのリスト
