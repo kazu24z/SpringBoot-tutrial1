@@ -38,6 +38,8 @@ public class IssueService {
 
     /**
      * 特定の課題を取得する
+     * @param issueId
+     * @return IssueModel
      */
     public IssueEntity findById(long issueId) {
         return issueRepository.findById(issueId);
