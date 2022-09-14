@@ -13,7 +13,6 @@ import java.util.List;
 public class IssueService {
 
     private final IssueRepository issueRepository;
-
     /**
      * 課題のリストを生成する
      * @return 課題データのリスト
