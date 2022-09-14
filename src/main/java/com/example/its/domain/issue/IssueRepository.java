@@ -13,6 +13,11 @@ import java.util.List;
 @Mapper
 @Repository
 public interface IssueRepository {
+
+    /**
+     * 課題の一覧を取得
+     * @return IssueEntityのリスト
+     */
     @Select("select * from issues")
     List<IssueEntity> findAll();
 }
