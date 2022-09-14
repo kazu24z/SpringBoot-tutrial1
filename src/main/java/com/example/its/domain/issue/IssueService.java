@@ -29,7 +29,7 @@ public class IssueService {
      * @param description
      */
     @Transactional
-    public  void create(String summary, String description) {
+    public void create(String summary, String description) {
         issueRepository.insert(summary, description);
     }
 }

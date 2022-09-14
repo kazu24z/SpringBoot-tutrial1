@@ -37,6 +37,7 @@ public class IssueController {
 
     /**
      * 課題作成ページを表示する
+     * @param form
      * @return http://domain/issues/creationFormのページ
      */
     @GetMapping("/creationForm")
@@ -46,6 +47,8 @@ public class IssueController {
 
     /**
      * 課題新規作成処理を実行する
+     * @param form
+     * @param bindingResult
      * @param model
      * @return http://domain/issuesのページ
      */

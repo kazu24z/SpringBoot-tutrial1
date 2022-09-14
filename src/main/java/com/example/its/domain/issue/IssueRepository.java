@@ -19,9 +19,14 @@ public interface IssueRepository {
      * 課題の一覧を取得
      * @return IssueEntityのリスト
      */
-    @Select("select * from issues")
+    @Select("SELECT * FROM issues")
     List<IssueEntity> findAll();
 
-    @Insert("insert into issues (summary,description) values (#{summary}, #{description})")
+    /**
+     * 課題の追加(DB保存）
+     * @param summary
+     * @param description
+     */
+    @Insert("INSERT INTO issues (summary,description) VALUES (#{summary}, #{description})")
     void insert(String summary, String description);
 }
