@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -33,5 +34,12 @@ public class IssueService {
     @Transactional
     public  void create(String summary, String description) {
         issueRepository.insert(summary, description);
+    }
+
+    /**
+     * 特定の課題を取得する
+     */
+    public IssueEntity findById(long issueId) {
+        return issueRepository.findById(issueId);
     }
 }
