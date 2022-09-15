@@ -9,15 +9,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.List;
 
 /**
-* 具体的な課題を生成するクラス
-*
-*/
+ * 具体的な課題を生成するクラス
+ */
 @Service
 @RequiredArgsConstructor
 public class IssueService {
 
     private final IssueRepository issueRepository;
-
     /**
      * 課題のリストを生成する
      * @return 課題データのリスト
@@ -32,7 +30,7 @@ public class IssueService {
      * @param description
      */
     @Transactional
-    public  void create(String summary, String description) {
+    public void create(String summary, String description) {
         issueRepository.insert(summary, description);
     }
 

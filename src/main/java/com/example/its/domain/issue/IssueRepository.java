@@ -12,11 +12,22 @@ import java.util.List;
  * 「課題」のリポジトリ層を作成
  */
 @Mapper
+@Repository
 public interface IssueRepository {
-    @Select("select * from issues")
+
+    /**
+     * 課題の一覧を取得
+     * @return IssueEntityのリスト
+     */
+    @Select("SELECT * FROM issues")
     List<IssueEntity> findAll();
 
-    @Insert("insert into issues (summary,description) values (#{summary}, #{description})")
+    /**
+     * 課題の追加(DB保存）
+     * @param summary
+     * @param description
+     */
+    @Insert("INSERT INTO issues (summary,description) VALUES (#{summary}, #{description})")
     void insert(String summary, String description);
 
     @Select("select * from issues where id=#{issueId}")

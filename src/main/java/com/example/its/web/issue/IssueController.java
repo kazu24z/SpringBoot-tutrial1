@@ -26,7 +26,8 @@ public class IssueController {
      * @param model
      * @return http://domain/issuesのページ
      */
-    @GetMapping
+
+    @GetMapping("/issues")
     public String showList(Model model) {
         model.addAttribute("issueList", issueService.findAll());
         return "issues/list";
@@ -34,6 +35,7 @@ public class IssueController {
 
     /**
      * 課題作成ページを表示する
+     * @param form
      * @return http://domain/issues/creationFormのページ
      */
     @GetMapping("/creationForm")
@@ -43,6 +45,8 @@ public class IssueController {
 
     /**
      * 課題新規作成処理を実行する
+     * @param form
+     * @param bindingResult
      * @param model
      * @return http://domain/issuesのページ
      */
