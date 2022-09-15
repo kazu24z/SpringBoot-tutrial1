@@ -29,4 +29,7 @@ public interface IssueRepository {
      */
     @Insert("INSERT INTO issues (summary,description) VALUES (#{summary}, #{description})")
     void insert(String summary, String description);
+
+    @Select("select * from issues where id=#{issueId}")
+    IssueEntity findById(long issueId);
 }
